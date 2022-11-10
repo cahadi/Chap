@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Chap.Views"
+             x:Class="Chap.AppShell"
+       BackgroundColor="#91b3f2">
+                           
+    <TabBar>
+        <ShellContent Route="LoginPage" 
+                      ContentTemplate="{DataTemplate views:LoginPage}"/>
+    </TabBar>
+    
+    <FlyoutItem Title="Первая вкладка">
+        <ShellContent Title="Первая верхняя вкладка" 
+                      Route="Page1" 
+                      ContentTemplate="{DataTemplate views:Page1}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Вторая вкладка">
+            <ShellContent Title="Вторая верхняя вкладка" 
+                      Route="SecondPage" 
+                      ContentTemplate="{DataTemplate views:SecondPage}"/>
+    </FlyoutItem>
+          
+    <TabBar>
+        <ShellContent Route="AddPage"
+                      ContentTemplate="{DataTemplate views:AddPage}"/>
+    </TabBar>
+    <TabBar>
+        <ShellContent Route="AppType"
+                      ContentTemplate="{DataTemplate views:AppType}"/>
+    </TabBar>
+    
+    <TabBar>
+        <ShellContent Route="ItemDetailPage"
+                      ContentTemplate="{DataTemplate views:ItemDetailPage}"/>
+    </TabBar>
+    <TabBar>
+        <ShellContent Route="TypesDetailPage"
+                      ContentTemplate="{DataTemplate views:TypesDetailPage}"/>
+    </TabBar>
+    <TabBar>
+        <ShellContent Route="ListTypes"
+                      ContentTemplate="{DataTemplate views:ListTypes}"/>
+    </TabBar>
+    
+    <MenuItem Text="Выйти" Clicked="MenuItem_Clicked"/>
+    
+</Shell>
